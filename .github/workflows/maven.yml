@@ -29,3 +29,9 @@ jobs:
 
     - name: Run tests
       run: mvn test --file collab-api/pom.xml  # Exécution des tests
+      
+    - name: Upload JAR
+      uses: actions/upload-artifact@v4
+      with:
+        name: collab-api-jar
+        path: collab-api/target/collab-api-0.0.1-SNAPSHOT.jar
