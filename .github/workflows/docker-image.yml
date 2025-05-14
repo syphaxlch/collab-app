@@ -18,7 +18,7 @@ jobs:
 
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build collab-app/collab-api --file collab-app/collab-api/Dockerfile --tag my-image-name:$(date +%s)
 
     - name: Verify the Docker image
       run: docker images
