@@ -65,7 +65,7 @@ jobs:
           --file collab-api/Dockerfile \
           --tag syphaxlch/collab-api:${{ github.sha }} \
           --load \ 
-          collab-api  # Utilisation du commit SHA comme tag unique
+          collab-api
 
     - name: Push Docker image
       run: |
