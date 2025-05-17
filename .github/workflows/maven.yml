@@ -63,10 +63,10 @@ jobs:
       run: |
         docker buildx build \
           --file collab-api/Dockerfile \
-          --tag syphaxlch/collab-api:${{ github.sha }} \
+          --tag ${{ secrets.DOCKER_USERNAME }}/collab-api:${{ github.sha }} \
           --load \
           collab-api
 
     - name: Push Docker image
       run: |
-        docker push my-image-name:${{ github.sha }}  # Pousser avec le tag basé sur le commit SHA
+        docker push ${{ secrets.DOCKER_USERNAME }}/collab-api:${{ github.sha }}
