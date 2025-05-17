@@ -64,6 +64,7 @@ jobs:
         docker buildx build \
           --file collab-api/Dockerfile \
           --tag my-image-name:${{ github.sha }} \
+          --load \  # ← permet de charger l’image dans le Docker local
           collab-api  # Utilisation du commit SHA comme tag unique
 
     - name: Push Docker image
