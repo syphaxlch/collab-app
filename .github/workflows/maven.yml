@@ -64,7 +64,7 @@ jobs:
         docker buildx build \
           --file collab-api/Dockerfile \
           --tag syphaxlch/collab-api:${{ github.sha }} \
-          --load \ 
+          --load \
           collab-api
 
     - name: Push Docker image
